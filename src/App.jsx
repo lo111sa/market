@@ -8,7 +8,7 @@ import ModalComponent from "./components/ModalComponent";
 const Login = lazy(() => import("./pages/auth/Login"));
 
 import { useAuthStore } from "./store/authStore";
-import Loader from "./components/loader/Loader";
+
 import useScanDetection from "use-scan-detection";
 
 function App() {
@@ -19,7 +19,13 @@ function App() {
     minLength: 13, // EAN13
   });
 
-  return <input value={value} type="text" />;
+  return (
+    <>
+      {" "}
+      <p>{value}</p>
+      <button>Click</button>
+    </>
+  );
 }
 
 export default App;
